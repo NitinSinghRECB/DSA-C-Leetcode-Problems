@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool search(vector<int>& nums, int target) {
+        unordered_map<int,int> mp;
+        for(int i : nums){
+            mp[i]++;
+        }
+        for(auto [keys , values] : mp){
+            if (keys==target){
+                return true;
+            }
+        }
+        return false;
+    }
+};
